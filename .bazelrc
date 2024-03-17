@@ -1,9 +1,17 @@
-# 
+# https://docs.aspect.build/guides/bazelrc/
 common --announce_rc
 common --enable_platform_specific_config
 
+build --subcommands
 build --verbose_failures
 build --enable_runfiles
+build --explain=logs/explain.log
+build --show_result=20
+build --show_timestamps
+build --curses=yes
+build --color=yes
+build --terminal_columns=143
+build --execution_log_json_file=logs/execution.log
 
 
 # Prevent Bazel from detecting the system's C++ toolchain.
